@@ -131,6 +131,7 @@ main
 .content-card
 {
     background-color: lightblue;
+    height: 20rem;
 }
 
 #card1
