@@ -1,0 +1,170 @@
+:root
+{
+    --navbar-height: 5.26rem;
+    --navbar-padding-v: .7rem;
+    --navbar-padding-h: 1.5rem;
+    --navbar-line-height: calc( var(--navbar-height) - 2 * var(--navbar-padding-v) );
+}
+
+@font-face
+{
+    font-family: mukta-light;
+    src: url(../fonts/Mukta-ExtraLight.ttf);
+}
+
+@font-face
+{
+    font-family: mukta-bold;
+    src: url(../fonts/Mukta-ExtraBold.ttf);
+    font-weight: bold;
+}
+
+body
+{
+    height: 100%;
+    overflow: hidden;
+}
+
+
+/* Nav Bar */
+.navbar
+{
+    padding: var(--navbar-padding-v) var(--navbar-padding-h);
+    line-height: var(--navbar-line-height);
+}
+
+.navbar
+{
+    display: flex;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--navbar-height);
+    box-sizing: border-box;
+    background-color: #262523;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+.navbar .logo
+{
+    height: var(--navbar-line-height);
+    margin-right: var(--navbar-padding-v);
+    vertical-align: top;
+}
+
+.navbar .site-name
+{
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: mukta-bold, 'Times New Roman', Times, serif;
+    color: white;
+}
+
+.navbar-items-wrapper 
+{
+    display: flex;
+    position: absolute;
+    box-sizing: border-box;
+    top: var(--navbar-padding-v);
+    right: var(--navbar-padding-h);
+    height: var(--navbar-line-height);
+    padding-left: var(--navbar-padding-h);
+    white-space: nowrap;
+}
+
+.navbar-items
+{
+    display: inline-block;
+}
+
+.navbar-items .navbar-iteam:first-child
+{
+    margin-left: 0;
+}
+
+.navbar-iteam 
+{
+    position: relative;
+    display: inline-block;
+    margin-left: 1.5rem;
+    line-height: var(--navbar-line-height);
+}
+
+.navbar-iteam > a
+{
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-family: mukta-light, 'Times New Roman', Times, serif;
+    color: white;
+}
+/* End of Nav bar */
+
+
+/* Grid Content Wrapper */
+.grid-content-wrapper
+{
+    position: relative;
+    display: grid;
+    height: 100vh;
+    top: 6rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: .2fr 2.5fr 1.2fr;
+
+    grid-template-areas: "main main main" "card1 card2 card3";
+    grid-gap: 0.2rem;
+}
+
+main
+{
+    background-color: lightcoral;
+    height: 30rem;
+    grid-area: main;
+}
+
+.content-card
+{
+    background-color: lightblue;
+}
+
+#card1
+{
+    grid-area: card1;
+}
+
+#card2
+{
+    grid-area: card2;
+}
+
+#card3
+{
+    grid-area: card3;
+}
+
+@media only screen and (max-width:898px)
+{
+    .grid-content-wrapper
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 0.4fr;
+        grid-template-areas: "main" "card1" "card2" "card3";
+    }
+
+    main
+    {
+        height: 20rem;
+    }
+
+    body
+    {
+        overflow: auto;
+    }
+}
+
