@@ -1,0 +1,150 @@
+/* Grid Content Wrapper */
+.grid-content-wrapper
+{
+    position: relative;
+    display: grid;
+    height: 100vh;
+    top: 6rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 0.5fr 4.2fr;
+
+    grid-template-areas: "main main main" "divide-text divide-text divide-text" "card1 card2 card3";
+    grid-gap: 0.2rem;
+}
+
+main
+{
+    position: relative;
+    background-color: lightcoral;
+    height: 30rem;
+    grid-area: main;
+}
+
+.content-card
+{
+    background-color: lightblue;
+    height: 20rem;
+}
+
+#card1
+{
+    grid-area: card1;
+}
+
+#card2
+{
+    grid-area: card2;
+}
+
+#card3
+{
+    grid-area: card3;
+}
+
+.card-thumbnail
+{
+    width: 100%;
+    height: 100%;
+}
+
+#main-splash
+{
+    position: absolute;
+    right:-1rem;
+    margin-right: 1.2rem;
+    top: .5rem;
+}
+
+#main-splash > img
+{
+    margin: 0;
+    width: 15rem;
+    transform: rotateZ(.03turn);
+
+    animation: checkitout .25s ease-in infinite alternate;
+}
+
+@keyframes checkitout
+{
+    0%
+    {
+        transform: scale(0.875) rotateZ(.03turn);
+    }
+
+    100%
+    {
+        transform: scale(1) rotateZ(.03turn);
+    }
+}
+
+@media only screen and (max-width: 600px) 
+{
+    .grid-content-wrapper
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 0.4fr;
+        grid-template-areas: "main" "divide-text" "card1" "card2" "card3";
+    }
+
+    main
+    {
+        height: 20rem;
+    }
+
+
+    .content-card
+    {
+        height: 10rem;
+    }
+}
+
+@media only screen and (max-width: 768px)
+{
+    .grid-content-wrapper
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 0.4fr;
+        grid-template-areas: "main" "divide-text" "card1" "card2" "card3";
+    }
+
+    main
+    {
+        height: 20rem;
+    }
+
+
+    .content-card
+    {
+        height: 10rem;
+    }
+
+    #main-splash
+    {
+        right: -.3rem;
+        margin: 0;
+        top: .5rem;
+    }
+
+
+    #main-splash > img
+    {
+        width: 6rem;
+    }
+
+}
+
+/* End of Grid */
+
+#divide-text
+{
+    grid-area: divide-text;
+    text-align: center;
+}
+
+#divide-text > p
+{
+    color: white;
+    font-family: mukta-bold;
+    font-weight: 600;
+    font-size: 1.5rem;
+}

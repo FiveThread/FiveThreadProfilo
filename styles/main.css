@@ -19,6 +19,11 @@
     font-weight: bold;
 }
 
+body
+{
+    background-color: #0f0f0f;
+}
+
 /* Nav Bar */
 .navbar
 {
@@ -98,73 +103,3 @@ a
     color: white;
 }
 /* End of Nav bar */
-
-
-/* Grid Content Wrapper */
-.grid-content-wrapper
-{
-    position: relative;
-    display: grid;
-    height: 100vh;
-    top: 6rem;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: .2fr 2.5fr 1.2fr;
-
-    grid-template-areas: "main main main" "card1 card2 card3";
-    grid-gap: 0.2rem;
-}
-
-main
-{
-    background-color: lightcoral;
-    height: 30rem;
-    grid-area: main;
-}
-
-.content-card
-{
-    background-color: lightblue;
-    height: 20rem;
-}
-
-#card1
-{
-    grid-area: card1;
-}
-
-#card2
-{
-    grid-area: card2;
-}
-
-#card3
-{
-    grid-area: card3;
-}
-
-.card-thumbnail
-{
-    width: 100%;
-    height: 100%;
-}
-
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px)
-{
-    .grid-content-wrapper
-    {
-        grid-template-columns: 1fr;
-        grid-template-rows: 0.4fr 0.4fr 0.4fr;
-        grid-template-areas: "main" "card1" "card2" "card3";
-    }
-
-    main
-    {
-        height: 20rem;
-    }
-
-    .content-card
-    {
-        height: 10rem;
-    }
-}
-
