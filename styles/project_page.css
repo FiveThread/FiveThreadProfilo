@@ -20,6 +20,20 @@ main
     grid-area: main;
 }
 
+#divide-text
+{
+    grid-area: divide-text;
+    text-align: center;
+}
+
+#divide-text > p
+{
+    color: white;
+    font-family: mukta-bold;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
 .content-card
 {
     background-color: lightblue;
@@ -77,26 +91,7 @@ main
     }
 }
 
-@media only screen and (max-width: 600px) 
-{
-    .grid-content-wrapper
-    {
-        grid-template-columns: 1fr;
-        grid-template-rows: 0.4fr 0.4fr 0.4fr;
-        grid-template-areas: "main" "divide-text" "card1" "card2" "card3";
-    }
-
-    main
-    {
-        height: 20rem;
-    }
-
-
-    .content-card
-    {
-        height: 10rem;
-    }
-}
+/* Mobile Only */
 
 @media only screen and (max-width: 768px)
 {
@@ -130,21 +125,7 @@ main
     {
         width: 6rem;
     }
-
 }
 
 /* End of Grid */
 
-#divide-text
-{
-    grid-area: divide-text;
-    text-align: center;
-}
-
-#divide-text > p
-{
-    color: white;
-    font-family: mukta-bold;
-    font-weight: 600;
-    font-size: 1.5rem;
-}

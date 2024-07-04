@@ -6,6 +6,22 @@
     --navbar-line-height: calc( var(--navbar-height) - 2 * var(--navbar-padding-v) );
 }
 
+#modile-burger-nav
+{
+    display:none;
+    text-align: center;
+    position: relative;
+    height: var(--navbar-line-height);
+    margin-right: var(--navbar-padding-v);
+    vertical-align: top;
+}
+
+#modile-burger-nav > img
+{
+    width: 4rem;
+}
+
+
 @font-face
 {
     font-family: mukta-light;
@@ -49,7 +65,7 @@ a
     text-decoration: none;
 }
 
-.navbar .logo
+.logo
 {
     height: var(--navbar-line-height);
     margin-right: var(--navbar-padding-v);
@@ -103,3 +119,24 @@ a
     color: white;
 }
 /* End of Nav bar */
+
+
+@media only screen and (max-width: 768px)
+{
+    .navbar-items-wrapper
+    {
+        position: absolute;
+        display: none;
+    }
+
+    .site-name
+    {
+        display: none;
+    }
+
+    #modile-burger-nav
+    {
+        display: contents;
+    }
+
+}
