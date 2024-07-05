@@ -6,21 +6,6 @@
     --navbar-line-height: calc( var(--navbar-height) - 2 * var(--navbar-padding-v) );
 }
 
-#modile-burger-nav
-{
-    display:none;
-    text-align: center;
-    position: relative;
-    height: var(--navbar-line-height);
-    margin-right: var(--navbar-padding-v);
-    vertical-align: top;
-}
-
-#modile-burger-nav > img
-{
-    width: 4rem;
-}
-
 
 @font-face
 {
@@ -118,7 +103,66 @@ a
     font-family: mukta-light, 'Times New Roman', Times, serif;
     color: white;
 }
-/* End of Nav bar */
+/* End of PC nav bar */
+
+/* Mobile nav bar */
+
+#ham-input
+{
+    display: none;
+}
+
+#ham-menu
+{
+    display: none;
+    margin-top: .4rem;
+    position: relative;
+    vertical-align: top;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient( to bottom, #262523, #262523 20%, white 20%, white 40%, #262523 40%, #262523 60%, white 60%, white 80%, #262523 80%, #262523 100% );
+}
+
+#ham-menu:hover
+{
+    cursor: pointer;
+}
+
+#ham-input:checked + #ham-menu #topbar-menu
+{
+    visibility: visible;
+}
+
+
+#topbar-menu
+{
+    top: 5.4rem;
+    left: 0;
+    visibility: hidden;
+    position: fixed;
+    background-color: gray;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+#ham-menu ul
+{
+    padding-left: 0;
+}
+
+#ham-menu li
+{
+    list-style: none;
+    text-align: center;
+}
+
+#ham-menu a
+{
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-family: mukta-bold, 'Times New Roman', Times, serif;
+    color: white;
+}
 
 
 @media only screen and (max-width: 768px)
@@ -134,9 +178,12 @@ a
         display: none;
     }
 
-    #modile-burger-nav
+    #ham-menu
     {
-        display: contents;
+        display: inline-block;
     }
 
 }
+/* End of mobile Nav bar */
+
+
